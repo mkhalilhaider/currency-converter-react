@@ -1,6 +1,7 @@
 import { use, useState } from "react";
 import useCurrencyInfo from "./hooks/useCurrencyInfo";
 import { InputBox } from "./components";
+import CreatedBy from "./components/CreatedBy";
 
 function App() {
   const [amount, setAmount] = useState(0);
@@ -77,7 +78,7 @@ function App() {
               />
             </div>
             <button
-            disabled={!amount}
+              disabled={!amount}
               type="submit"
               className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg cursor-pointer hover:contrast-200  "
             >
@@ -86,6 +87,7 @@ function App() {
           </form>
         </div>
       </div>
+      <CreatedBy />
     </div>
   );
 }
